@@ -22,6 +22,8 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
+  "id": null,
+  "iteration": 1643370954936,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -80,7 +82,8 @@
         {
           "datasource": "${prometheusds}",
           "editorMode": "code",
-          "expr": "avg_over_time(up{juju_model=\"kubeflow\"}[5m])",
+
+          "expr": "avg_over_time(up{juju_model=~\"kubeflow\"}[5m])",
           "instant": false,
           "legendFormat": "{{juju_application}}",
           "range": true,
@@ -109,5 +112,5 @@
   "timezone": "",
   "title": "CKF Charms",
   "version": 7,
-  "weekStart": "",
+  "weekStart": ""
 }
