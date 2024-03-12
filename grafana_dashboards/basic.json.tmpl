@@ -82,8 +82,7 @@
         {
           "datasource": "${prometheusds}",
           "editorMode": "code",
-
-          "expr": "avg_over_time(up{juju_model=~\"kubeflow\"}[5m])",
+          "expr": "avg_over_time(up{juju_model="kubeflow"}[5m])",
           "instant": false,
           "legendFormat": "{{juju_application}}",
           "range": true,
