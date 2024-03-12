@@ -82,7 +82,7 @@
         {
           "datasource": "${prometheusds}",
           "editorMode": "code",
-          "expr": "avg_over_time(up{juju_model="kubeflow"}[5m])",
+          "expr": "avg_over_time(up{juju_model=~\"kubeflow\"}[5m])",
           "instant": false,
           "legendFormat": "{{juju_application}}",
           "range": true,
@@ -90,8 +90,9 @@
         }
       ],
       "title": "Panel Title",
+      "description": "Panel title description",
       "type": "stat"
-    },
+    }
   ],
   "refresh": "1m",
   "schemaVersion": 33,
